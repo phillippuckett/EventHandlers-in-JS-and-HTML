@@ -1,0 +1,48 @@
+header{
+border: 1px solid rgb(200,50,0);
+height: 3vh;
+width: 50vh;
+padding: 1.25% 0;
+margin: auto;
+}
+
+.title {
+    text-align: center;
+border: 1px solid rgb(0,150,0);
+width: 50vh;
+padding: 1.25% 0;
+margin: auto;    
+}
+
+p { 
+    text-align: center;
+border: 1px solid rgb(200,50,0);   
+height: 3vh;
+width: 31.25%;
+display: inline-flex;
+padding: 1.25% 0;
+margin: auto;
+}
+
+.table {
+    text-align: center;
+border: 1px solid rgb(0,150,0);
+width: 50vh;
+padding: 1.25% 0;
+margin: auto;   
+}
+.column {
+     text-align: center;
+border: 1px solid rgb(150,150,0); 
+height: 3.5vh;
+width: 31.25%;
+display: inline-flex;
+margin: auto;
+}
+.row {
+    text-align: center;
+border: 1px solid rgb(0,150,0);
+width: 50vh;
+padding: 1.25% 0;
+margin: auto;    
+}

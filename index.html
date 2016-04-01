@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Keyboard Events</title>
+</head>
+
+<body>
+    <header>
+        Event Input
+        <input type="text" id="text1" />
+    </header>
+    <div class="title">
+        <p>EVENT</p>
+        <p>ACTION</p>
+        <p>VALUE</p>
+    </div>
+    <div class="table">
+        <div class="row">
+            <div class="column">keyDown</div>
+            <div class="column" id="down"></div>
+            <div class="column" id="downVal"></div>
+        </div>
+        <div class="row">
+            <div class="column">keyUp</div>
+            <div class="column" id="up"></div>
+            <div class="column" id="upVal"></div>
+        </div>
+        <div class="row">
+            <div class="column">keyPress</div>
+            <div class="column" id="press"></div>
+            <div class="column" id="pressVal"></div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            document.getElementById('text1').addEventListener('keyDown', keyIsDown, false)
+            document.getElementById('text1').addEventListener('keyUp', keyIsUp, false)
+            document.getElementById('text1').addEventListener('keyPress', keyIsPress, false)
+        }
+        console.log(onload);
+        keyIsDown = function (){
+            document.getElementById('down').style.backgroundColor = 'rgb(255,0,0)';
+            document.getElementById('up').style.backgroundColor = 'rgb(255,255,255)';
+            document.getElementById('press').style.backgroundColor = 'rgb(255,255,255)';
+            document.getElementByID('downVal').innerHTML = document.getElementById('text1').value;
+        }
+        keyIsUp = function (){
+            document.getElementById('down').style.backgroundColor = 'rgb(255,255,255)';
+            document.getElementById('up').style.backgroundColor = 'rgb(255,255,0)';
+            document.getElementById('press').style.backgroundColor = 'rgb(255,255,255)';
+            document.getElementByID('upVal').innerHTML = document.getElementById('text1').value;
+        }
+        keyIsPress = function (){
+            document.getElementById('down').style.backgroundColor = 'rgb(255,255,255)';
+            document.getElementById('up').style.backgroundColor = 'rgb(255,255,255)';
+            document.getElementById('press').style.backgroundColor = 'rgb(0,255,0)';
+            document.getElementByID('pressVal').innerHTML = document.getElementById('text1').value;
+        }
+    </script>
+
+</body>
+
+</html>
